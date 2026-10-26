@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Last Island</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="menu">
+
+    <h1>LAST ISLAND</h1>
+
+    <input
+        id="name"
+        placeholder="Your name"
+        maxlength="16"
+    >
+
+    <button id="create">
+        Create Room
+    </button>
+
+    <div class="separator">
+        OR
+    </div>
+
+    <input
+        id="room"
+        placeholder="Room code"
+        maxlength="6"
+    >
+
+    <button id="join">
+        Join Room
+    </button>
+
+    <p id="message"></p>
+
+</div>
+
+<div id="lobby" hidden>
+
+    <h2>Room: <span id="roomCode"></span></h2>
+
+    <p>
+        Share this code with your friends.
+    </p>
+
+    <div id="playerList"></div>
+
+    <button id="start">
+        Start Game
+    </button>
+
+</div>
+
+<canvas id="game"></canvas>
+
+<div id="hud" hidden>
+
+    <div>
+        Players:
+        <span id="playerCount">0</span>
+    </div>
+
+    <div>
+        Safe Zone:
+        <span id="zoneSize">1000</span>
+    </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>
